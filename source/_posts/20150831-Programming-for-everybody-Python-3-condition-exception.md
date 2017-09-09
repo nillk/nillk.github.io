@@ -13,8 +13,8 @@ tags:
 
 ## 3.1 Conditional Statements
 conditional steps의 statement는 실행될 수도 아닐 수도!
-```
-if question :
+```python
+if question:
   statement
 ```
 If the question(condition) is false then python will skip all the statement.
@@ -51,7 +51,7 @@ if elif else!
 예를 들어 나는 숫자를 입력받아야 하는데 사용자가 문자를 입력했어. 아마 프로그램은 거기서 그냥 Traceback을 출력해버리고 죽어버리겠지. 하지만 난 그러고싶지 않은걸!  
 우리는 그런 위험한 구문이 어디인지 알아. 그리고 우리는 그 순간에 프로그램이 죽는 게 아니라 다른 대안이 실행되었으면 좋겠어! 일종의 보험 같은 것.
 
-```
+```python
 astr = 'Hello Bob'
 try :
   istr = int(astr)

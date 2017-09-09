@@ -33,7 +33,7 @@ blog
 ### Blog repository에 source branch를 사용
 그래서 일단 원상 복귀를 시켜놓고 오늘 다시 검색을 해보니 [Can deploy git ways upload source files at the same time ?](https://github.com/hexojs/hexo/issues/1899) 이런 질문글이 있었고, 여기서 해답을 찾았다. 답변 중에 다른 branch를 만들어서 upload 하라는 글이 있었다. 그래서 반신반의하며 다시 blog 디렉토리에서 source branch를 생성 후, remote로 push 했더니 되었다. 하나의 repository에서 source와 public 파일들 모두를 관리하게 되었으니 더 잘 된 것 같다.
 
-```
+```shell
 git init
 git checkout -b source
 git add .

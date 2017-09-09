@@ -33,7 +33,7 @@ python의 가장 강력한 data collection. 빠른 db 와 같은 일을 할 수 
 다른 언어에서는 이렇게 다른 이름들을 가지고 있지. 쟤네도 Dictionary야
 
 List는 가지고 있는 값들의 list내의 위치를 기반으로 index. Dictionaries는 가방이다. 순서가 없음. 그래서 우리는 *lookup tag*같은 걸로 우리가 뭘 넣었는지 정리하지.
-```
+```python
 >>> purse = dict()
 >>> purse['money'] = 12
 >>> purse['candy'] = 3
@@ -51,7 +51,7 @@ Dictionaries는 index대신 key를 값을 얻기 위해 사용한다는 점만 �
 
 ### Dictionary Literals (Constants)
 Dictionary literals 는 `{}` 얘를 씀. key : value pair로. 그냥 `{}`만 써서 빈 dictionary를 만들 수도 있음
-```
+```python
 jjj = {'chunk':1, 'fred':42, 'jan':100}
 ```
 
@@ -60,7 +60,7 @@ Dictionary를 쓰는 일반적인 이유 중 하나는 *세는*일이다. counti
 
 ### Dictionary Tracebacks
 key가 dict안에 없는데 참조하려고 하면 에러남! 그래서 우리는 in 을 사용해서 이 키 값이 dictionary안에 있는지 없는지 확인할 수 있다.
-```
+```python
 print 'csev' in ccc
 ```
 
@@ -69,13 +69,13 @@ print 'csev' in ccc
 
 ### The get method for dictionary
 `get`메소드를 이용해 키 값이 없는 경우의 기본값을 지정할 수 있음
-```
+```python
 counts.get(name, 0)
 ```
 name키가 존재하는 경우 값을 리턴 아니면 0
 
 ### Simplified counting with get()
-```
+```python
 counts[name] = counts.get(name, 0) + 1
 ```
 걍 이러면 됨!
@@ -87,7 +87,7 @@ counts[name] = counts.get(name, 0) + 1
 Dictionary는 순서대로 저장되어 있지는 않지만 그냥 for 문을 써서 모든 entries 를 읽을 수는 있어.
 
 ### Retrieving lists of Keys and Values
-```
+```python
 >>> jjj = {'chunk':1, 'fred':42, 'jan':100}
 >>> jjj.keys()
 ['jan', 'chunk', 'fred']
@@ -99,7 +99,7 @@ Dictionary는 순서대로 저장되어 있지는 않지만 그냥 for 문을 �
 
 ### Bonus : Two Iteration Variables!
 우리는 dictionary에서 loop를 돌면서 2개의 iteration variables를 가질 수 있음. 첫번째 variable은 key, 두번째 variable은 value
-```
+```python
 for key, value in jjj.items():
   print key, value
 ```

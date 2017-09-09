@@ -16,7 +16,7 @@ Tuples은 세번째 Collection! List와 Dictionary에 이어서. List랑 비슷�
 
 ### But, Tuples are "immutable"
 list와 다르게 tuple 은 한 번 생성하면 수정할 수 없어. string 같아
-```
+```python
 >>> x = [9, 8, 7]
 >>> x[2] = 6
 >>> print (x)
@@ -42,7 +42,7 @@ TypeError: 'tuple' object does not support item assignment
 Traceback을 보게 될 것이야
 
 ### A Tale of Two Sequences
-```
+```python
 >>> t = tuple()
 >>> dir(t)
 ['count', 'index']
@@ -53,7 +53,7 @@ Python은 tuple을 수정 불가능하게 만들기 때문에 메모리를 사�
 
 ### Tuples and Assignment
 오 우리는 tuple을 할당문의 왼쪽에도 넣을 수 있어!
-```
+```python
 >>> (x, y) = (4, 'fred')
 >>> print (y)
 fred
@@ -67,7 +67,7 @@ dictionary의 `items()` 메소드는 (key, value) tuple의 list를 return
 
 ### Tuples are Comparable
 비교 연산자는 tuples이나 다른 sequence에도 먹힘. 만약 첫번째 item이 같으면 Python은 다음 항목으로 넘어감. 다른 애를 찾을 때까지!
-```
+```python
 >>> (0, 1, 2) < (5, 1, 2)
 True
 >>> (0, 1, 20000) < (0, 3, 4)
@@ -80,7 +80,7 @@ True
 
 ### Sorting Lists of Tuples
 우리는 sorting된 dictionary를 원할 때, tuples의 list를 sorting하는 방식을 쓸 수 있어!
-```
+```python
 >>> d = {'a':10, 'b':1, 'c':22}
 >>> t = d.items()
 >>> t
@@ -94,12 +94,12 @@ True
 위와 같은 동작을 그냥 sorted 함수를 이용해서 할 수도 있음
 
 ### Sort by values instead of key
-```
+```python
 tmp.sort(reverse=True)
 ```
 
 ### 10 Most Common Words
-```
+```python
 counts = dict have a count of words
 lst = []
 for key, value in counts.items():
@@ -112,7 +112,7 @@ for value, key in lst[:10]:
 ```
 
 ### Even Shorter Version (adv)
-```
+```python
 c = {'a':10, 'b':1, 'c':22}
 print (sorted([(v, k) for k, v in c.items()]))
 ```

@@ -46,14 +46,14 @@ How we think like a computer
 how to kind of build intelligence into loops
 
 ### Looping through a Set
-```
+```python
 for thing in [9, 41, 12, 3, 74, 15]:
   thing
 ```
 What is the largest number?
 
 ### Finding the largest value
-```
+```python
 largest_so_far = -1
 for thing in [9, 41, 12, 3, 74, 15]:
   if thing > largest_so_far:
@@ -63,7 +63,7 @@ print largest_so_far
 largest_so_far = 9 -> 41 -> 41 -> 41 -> 74 -> 74 (loop 안에서 변화)
 
 ### Counting in a Loop
-```
+```python
 zork = 0
 for thing in [9, 41, 12, 3, 74, 15]:
   zork = zork + 1
@@ -73,7 +73,7 @@ print zork
 zork = 1 -> 2 -> 3 -> 4 -> 5 -> 6
 
 ### Summing in a Loop
-```
+```python
 zork = 0
 for thing in [9, 41, 12, 3, 74, 15]:
   zork = zork + thing
@@ -83,7 +83,7 @@ print zork
 zork = 9 -> 50 -> 62 -> 65 -> 139 -> 154
 
 ### Finding the Average in a Loop
-```
+```python
 count = 0
 sum = 0
 for thing in [9, 41, 12, 3, 74, 15]:
@@ -93,14 +93,14 @@ print count, sum, sum/count
 ```
 
 ### Filtering in a Loop
-```
+```python
 for thing in [9, 41, 12, 3, 74, 15]:
   if thing > 20:
     print 'Large number', thing
 ```
 
 ### Search Using a Boolean Variable
-```
+```python
 found = False
 for thing in [9, 41, 12, 3, 74, 15]:
   if thing == 3:
@@ -114,7 +114,7 @@ This means : We found it! There is a three!!!
 초기값을 어떻게 정하느냐에 따라 값이 이상하게 나올 수 있어. 초기값을 -1로 정하고 loop를 돌았는데 전부 -1보다 크면? 그럼 최소값은 초기값(-1)이 그대로 나올거야. 이건 우리가 원하는 바가 아니지!
 
 ### None value
-```
+```python
 smallest = None
 for value in [9, 41, 12, 3, 74, 15]:
   if smallest is None:

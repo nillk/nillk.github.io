@@ -23,7 +23,7 @@ tags:
 
 ### Using open()
 built-in function in Python
-```
+```python
 handle = open(filename, mode)
 ```
 - return a handle use to manipulate the file
@@ -31,7 +31,7 @@ handle = open(filename, mode)
 - mode is optional and should be 'r' if we are planning reading the file and 'w' if we are going to write to the file
 
 ### What is a Handle?
-```
+```python
 fhand = open('mbox.txt')
 print fhand
 <open file 'mbox.txt', mode 'r' at 0x1005088b0>
@@ -42,7 +42,7 @@ Traceback을 보게 되겠지. IOError NO such file or directory!
 
 ### The newline Character
 special charater in files. 라인의 끝을 가리킴 => `'\n'` => 얘는 여전히 one charater다!
-```
+```python
 >>> stuff = 'Hello\nWorld!'
 >>> stuff
 'Hello\nWorld!'
@@ -57,14 +57,14 @@ A text file can be thought of as a sequence of lines
 
 ### File Handle as a Sequence
 파일은 sequence of lines라고 했지. sequence는 for로 interative하게 사용할 수 있어. sequence는 ordered set이라는 걸 기억해라!
-```
+```python
 xfile = open('mbox.txt')
 for cheese in xfile:
   print cheese
 ```
 
 ### Counting Lines in a File
-```
+```python
 fhand = open('mbox.txt')
 count = 0
 for line in fhand:
@@ -74,7 +74,7 @@ print 'Line Count: ', count
 
 ### Reading the Whole File
 큰 파일은 당연히 힘들겠지만, 작은 건 괜춘!
-```
+```python
 fhand = open('mbox-short.txt')
 inp = fhand.read()
 print len(inp)
@@ -82,7 +82,7 @@ print len(inp)
 전체 파일의 character 수를 알려줌
 
 ### Searching Through a File
-```
+```python
 fhand = open('mbox-short.txt')
 for line in fhand:
   if line.startswith('Form:'):
@@ -93,7 +93,7 @@ BUT! 이렇게 하면 문제가 생겨! 아마 중간에 빈 줄이 하나씩 �
 
 ### Searching Through a File (fixed)
 그렇다면 문자열에서 오른쪽에 붙는 whitespace를 잘라버리면 간단하다. `rstrip()`
-```
+```python
 fhand = open('mbox-short.txt')
 for line in fhand:
   line = line.rstrip()
@@ -102,7 +102,7 @@ for line in fhand:
 ```
 
 ### Skipping with continue
-```
+```python
 fhand = open('mbox-short.txt')
 for line in fhand:
   line = line.rstrip()
@@ -113,7 +113,7 @@ for line in fhand:
 ```
 
 ### Using in to select lines
-```
+```python
 fhand = open('mbox-short.txt')
 for line in fhand:
   line = line.rstrip()
@@ -123,7 +123,7 @@ for line in fhand:
 ```
 
 ### Prompt for File Name
-```
+```python
 fname = raw_input('Enter the file name: ')
 fhand = open(fname)
 count = 0
@@ -135,7 +135,7 @@ print 'There were ', count, 'subject lines in', fname
 
 ### Bad File Names
 `try` & `except` 구문을 이용해 이상한 파일명이 들어와서 프로그램이 멈추는 걸 방지하자!
-```
+```python
 frame = raw_input('Enter the file name:')
 try:
   fhand = open(fname)

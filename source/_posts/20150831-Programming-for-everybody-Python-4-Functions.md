@@ -17,7 +17,7 @@ Functions은 저장해놨다가 다시 쓰고 쓰고 그게 기본적인 idea. �
 
 ### def keyword
 python은 def구문을 보면 오! 이건 function이군! 하면서 코드를 기록하기 시작해. indent 블록이 다시 앞으로 나올 때까지(def 구문이 끝날 때까지)
-```
+```python
 def 함수명():
 ```
 이렇게! 그러면 다음에 계속 함수명() 으로 언제든 불러다 쓸 수 있지!

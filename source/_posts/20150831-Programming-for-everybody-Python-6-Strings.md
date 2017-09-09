@@ -29,28 +29,28 @@ index와 square brackets을 이용해 string내부의 single character를 얻을
 문자열 길이를 넘어간 index를 넣으면 에러를 받을 것이야!!! 그러니 조심해라
 
 ### Len Function
-```
+```python
 >>> len('banana')
 6
 ```
 
 ### Looping Through Strings
 1. use while and len function
-```
+```python
 fruit = 'banana'
 index = 0
 while index < len(fruit):
 ```
 
 2. using for
-```
+```python
 fruit = 'banana'
 for letter in fruit:
 ```
 The iteration variable is completely taken care of by the for loop
 
 ### Looping and Counting
-```
+```python
 fruit = 'banana'
 count = 0
 for letter in fruit:
@@ -68,7 +68,7 @@ The iteration variable moves through all of the values in the sequence
 We can also look at any continuous section of a string using a colon operator  
 The second number is one beyond the end of the slice - *up to but not including*  
 If the second number is beyond the end of the string, it stops at the end
-```
+```python
 >>> s = 'Monty Python'
 >>> s[0:4]
 'Mont'
@@ -85,7 +85,7 @@ If the second number is beyond the end of the string, it stops at the end
 
 ### Using in as an Operator
 `in` : String 문자열 안에 어떤 문자열이 들어있는지 확인할 수 있음. logical expression. return True or False
-```
+```python
 >>> fruit = 'banana'
 >>> 'n' in fruit
 True
@@ -96,7 +96,7 @@ True
 ```
 
 ### String Comparison
-```
+```python
 if word == 'banana':
 if word < 'banana':
 elif word > 'banana':
@@ -107,7 +107,7 @@ Python은 string library안에 굉장히 많은 string function을 갖고 있다
 * `upper()` : 대문자로 바꾼 대체 문자열 return  
 * `lower()` : 소문자로 바꾼 대체 문자열 return
 
-```
+```python
 >>> stuff = 'Hello World'
 >>> type(stuff)
 <type 'str'>
@@ -117,7 +117,7 @@ Python은 string library안에 굉장히 많은 string function을 갖고 있다
 
 ### Searching a String
 `find()` 함수를 써서 내가 원하는 서브 스트링이 어떤 특정 문자열에 포함되어 있다면 그 첫번째 index를 얻을 수 있음. 만약 특정 문자열에서 서브 스트링을 찾을 수 없다면 -1을 return.
-```
+```python
 >>> fruit = 'banana'
 >>> pos = fruit.find('na')
 2
@@ -127,7 +127,7 @@ Python은 string library안에 굉장히 많은 string function을 갖고 있다
 
 ### Search and Replace
 워드의 모두 찾아서 바꾸기 기능이라고 보면 됨.
-```
+```python
 >>> greet = 'Hello Bob'
 >>> greet.replace('o', 'X')
 'HellX BXb'
@@ -143,7 +143,7 @@ greet는 여전히 그대로 Hello Bob
 
 ### Prefixes
 이게 어떤 문자열로 시작하니?
-```
+```python
 >>> line = 'Please have a nice day'
 >>> line.startswith('Please')
 True

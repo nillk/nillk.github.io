@@ -27,16 +27,16 @@ tags:
 
 
 ### Sentences or Lines
-```
+```python
 x = 2
 ```
 Assignment Statement : assign a value to a variable
 
-```
+```python
 x = x + 2
 ```
 Assignment with expression : right side is an expression, after calculate the value and then assign the value to in memory named x variable
-```
+```python
 print x
 ```
 Print statement
@@ -62,7 +62,7 @@ Print statement
 ## 2.2 Type
 
 Python은 타입을 알 수 있다. 그래서 내가 정말 뭘 의미하는지 알 수 있음
-```
+```python
 >>> 1 + 1
 2
 >>> 'Hello, ' + 'World!'
@@ -70,7 +70,7 @@ Python은 타입을 알 수 있다. 그래서 내가 정말 뭘 의미하는지 
 ```
 
 위 보기와 같이 \+ 기호는 숫자일 때는 더하고 문자열일 때는 이어붙임. 알아서 하는거지. Python이 타입을 알고 있어야 가능한 이야기. But! 그래서 Type은 문제를 일으킬 수도 있지. 기억해, python은 type을 보고 있어. 숫자 + 문자 이런 거 안됨
-```
+```python
 >>> type('Hello')
 <type 'str'>
 ```
