@@ -6,6 +6,7 @@ categories:
 tags:
   - programming
   - react
+  - translation
 date: 2016-04-21 22:49:02
 mathjax: true
 ---
@@ -121,4 +122,3 @@ React를 빠르게 한 기술은 새로운 것이 아니다. 우리는 DOM을 �
 사람들은 여전히 이것들에 대해 이야기 하고 있지만 이것들은 표준 Javascript 코드를 이용해 구현하기 몹시 어렵다. React가 갑자기 두각을 나타낼 수 있었던 것은 이 모든 최적화가 기본적으로 이루어지기 때문이다. 그래서 우리의 앱을 느리게 만드는 것이 오히려 더 어려운 일이 되고, 우리가 스스로의 무덤을 파는 것을 막을 수 있다.
 
 React의 성능 비용 모델(performance cost model) 역시 이해하기 매우 간단하다: 모든 `setState`는 모든 하위 트리를 다시 렌더링한다. 만약 성능을 쥐어 짜고 싶다면, `setState`를 최대한 적게 부르고, 큰 규모의 하위 트리를 다시 렌더링하는 것을 막기 위해 `shouldComponentUpdate`를 사용하렴!
-
