@@ -146,6 +146,9 @@ div {
                 margin: 5px 0;
                 line-height: 1.5;
             }
+            .category-list-child {
+                padding-left: 8px;
+            }
         }
         .category-list-count {
              padding-left: 5px;
@@ -217,6 +220,15 @@ div {
               content: "\f07c";
               padding-right: 0.3em;
             }
+
+            a:nth-child(n+2) {
+                &:before {
+                    font-family: "FontAwesome";
+                    content: "\f105";
+                    padding-left: 0.3em;
+                    padding-right: 0.3em;
+                }
+            }
         }
         #busuanzi_value_page_pv {
             &:before {
@@ -263,7 +275,7 @@ div {
         font-size: 15px;
         line-height: 1.77;
         color: #444;
-        padding-top: 15px;
+        padding-top: 20px;
         text-align: justify;
         text-justify: distribute;
         word-break: break-all;
@@ -338,6 +350,7 @@ div {
         }
     }
     .tags {
+        padding-top: 1em;
         padding-bottom: 1em;
         a {
             margin-right: .5em;
