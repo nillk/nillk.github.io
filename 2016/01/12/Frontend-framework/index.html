@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Frontend Framework | Hello, Programming!</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/7.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create','UA-80485929-2','auto');ga('send','pageview');</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Frontend Framework</h1><a id="logo" href="/.">Hello, Programming!</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Frontend Framework</h1><div class="post-meta">Jan 12, 2016<span> | </span><span class="category"><a href="/categories/environment/">environment</a><a href="/categories/environment/development-tools/">development tools</a></span></div><a class="disqus-comment-count" data-disqus-identifier="2016/01/12/Frontend-framework/" href="/2016/01/12/Frontend-framework/#disqus_thread"></a><div class="post-content"><p>뜬금없이 파견된 프로젝트에서 웹 개발 그것도 프론트엔드를 하게 되었다. 입사 이래로 처음이야… 그래서 내게는 생소한 프레임워크가 많아 조금 헛갈려서 정리를 했다. 아직도 조금 헛갈리기는 하지만 익숙해지겠지.</p>
+<h3 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h3><p>module bundler</p>
+<ul>
+<li>webpack은 모듈 + dependencies를 가지고 static assets을 생성</li>
+<li>application code를 가지고 정적 자원들과 개발 서버 생성해줌</li>
+<li>사용하지 않는 코드들 처리, hot module replacement 지원 (다른 빌드 툴에 비한 이점)</li>
+<li>webpack의 진짜 강점은 loader들(loader들을 이용해 babel을 통해 JSX -&gt; Javascript 변환 가능)<ul>
+<li>babel-loader는 ES2015와 JSX변환을 모두 지원</li>
+</ul>
+</li>
+<li>AMD, CommonJS등의 모듈 포맷 지원 (loader를 이용해) ES6도 지원</li>
+<li>Support package manager: Bower, npm</li>
+<li>Loaders for non-code: CSS, templates…</li>
+<li>On-demand loading</li>
+<li>Built-in development server</li>
+</ul>
+<h3 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h3><p>transform compiler</p>
+<ul>
+<li>브라우저 별로 ES6에 대한 지원 여부 차이가 크므로 현재는 ES6로 작성하면 ES5로 트랜스파일해야 실제로 사용 가능</li>
+<li>ECMAScript 6 문법으로 작성된 파일을 변환-컴파일</li>
+<li>원래 6to5라는 이름으로 ES6 -&gt; ES5 도구로 시작했는데, 인기가 좋아서 ES7이나 다른 트랜스파일도 지원하는 포괄적인 도구가 되기 위해 Babel로 이름 변경</li>
+</ul>
+<h3 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h3><p>node.js기반의 task runner</p>
+<ul>
+<li>streaming build system</li>
+<li>project를 development, production, testing등의 다른 목적 별로 빌드해줌</li>
+<li>예를 들어 production(운영)으로 build하면 JavaScript를 minify하고, Sass파일을 컴파일하고, 코드에 오류가 없는지 체크하고 싶겠지. 이걸 그냥 gulp task를 작성해서 하자!</li>
+</ul>
+<h3 id="mocha"><a href="#mocha" class="headerlink" title="mocha"></a>mocha</h3><p>simple, flexible, fun javascript test framework for node.js &amp; the browser</p>
+<ul>
+<li>support TDD, BDD</li>
+<li>엄밀히 말하면 Test framework라기보다는 Test framework를 담는 interface같은 형태를 띄고 있고 runner를 포함하고 있음<ul>
+<li>Assertion을 포함하고 있지 않음. 대신 어떤 Assertion library라도 가져다가 사용할 수 있음</li>
+</ul>
+</li>
+</ul>
+<h3 id="chai"><a href="#chai" class="headerlink" title="chai"></a>chai</h3><p>DBB/TDD assertion library for node and the browser</p>
+</div><div class="tags"><a href="/tags/environment/">environment</a><a href="/tags/development-tools/">development tools</a><a href="/tags/frontend/">frontend</a><a href="/tags/framework/">framework</a></div><div class="post-nav"><a class="pre" href="/2016/04/21/Zookeeper-Kafka-cmd-run-error/">Zookeeper &amp; Kafka 실행 시 에러</a><a class="next" href="/2016/01/12/Git-commands-frequently-used/">자주 사용하게 되는 Git 명령어</a></div><div id="disqus_thread"><div class="btn_click_load"><button class="disqus_click_btn">阅读评论 「请确保 disqus.com 可以正常加载」</button></div><script>var disqus_shortname = 'nillk';
+var disqus_identifier = '2016/01/12/Frontend-framework/';
+var disqus_title = 'Frontend Framework';
+var disqus_url = 'http://nillk.github.io/2016/01/12/Frontend-framework/';
+$('.btn_click_load').click(function() {
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+  $('.btn_click_load').css('display','none');
+});
+$.ajax({
+  url: 'https://disqus.com/next/config.json',
+  timeout: 3000,
+  type: 'GET',
+  success: (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    $('.btn_click_load').css('display','none');
+  })(),
+  error: function() {
+    $('.btn_click_load').css('display','block');
+  }
+});</script><script id="dsq-count-scr" src="//nillk.disqus.com/count.js" async></script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="http://nillk.github.io"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/environment/">environment</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/environment/development-tools/">development tools</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/environment/eclipse/">eclipse</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/environment/hexo/">hexo</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/">programming</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/programming/algorithm/">algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/java/">java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/python/">python</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/react/">react</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/scala/">scala</a><span class="category-list-count">1</span></li></ul></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/environment/" style="font-size: 15px;">environment</a> <a href="/tags/homebrew/" style="font-size: 15px;">homebrew</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/mac/" style="font-size: 15px;">mac</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/programming/" style="font-size: 15px;">programming</a> <a href="/tags/terminal/" style="font-size: 15px;">terminal</a> <a href="/tags/eclipse/" style="font-size: 15px;">eclipse</a> <a href="/tags/spring/" style="font-size: 15px;">spring</a> <a href="/tags/tomcat/" style="font-size: 15px;">tomcat</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/jadeclipse/" style="font-size: 15px;">jadeclipse</a> <a href="/tags/tip/" style="font-size: 15px;">tip</a> <a href="/tags/coursera/" style="font-size: 15px;">coursera</a> <a href="/tags/programming-for-everybody/" style="font-size: 15px;">programming for everybody</a> <a href="/tags/scala/" style="font-size: 15px;">scala</a> <a href="/tags/daily/" style="font-size: 15px;">daily</a> <a href="/tags/development-tools/" style="font-size: 15px;">development tools</a> <a href="/tags/frontend/" style="font-size: 15px;">frontend</a> <a href="/tags/framework/" style="font-size: 15px;">framework</a> <a href="/tags/translation/" style="font-size: 15px;">translation</a> <a href="/tags/scalatest/" style="font-size: 15px;">scalatest</a> <a href="/tags/test/" style="font-size: 15px;">test</a> <a href="/tags/system-rules/" style="font-size: 15px;">system rules</a> <a href="/tags/blog/" style="font-size: 15px;">blog</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/algorithm/" style="font-size: 15px;">algorithm</a> <a href="/tags/hackerrank/" style="font-size: 15px;">hackerrank</a> <a href="/tags/dynamic-programming/" style="font-size: 15px;">dynamic programming</a> <a href="/tags/react/" style="font-size: 15px;">react</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/03/04/Java-generics-with-wildcard/">Java generics <object> 와 <? extends Object>의 차이</object></a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/23/Hackerrank-sherlock-and-cost/">[Hackerrank] Sherlock and Cost</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/04/Hexo-source-managing-with-git-branch/">Hexo source 파일도 git으로 관리하기</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/02/Hello-github-page-and-hexo-blog/">Hello, github page and hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/18/Scalatest-fixture-system-rules/">Scalatest - fixtures에 System-Rules 사용하기</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/11/Python-interesting-standard-library/">재미있는 Python 기본 모듈</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/28/Upper-bounded-wildcards/">Upper bounded wildcards</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/15/Ubuntu-ssl-certificate-verify-failed/">Ubuntu에서 ssl certificate verify failed 에러시 설정 (인증서 등록)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/21/React-diff-algorithm/">React diff algorithm</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/21/Zookeeper-Kafka-cmd-run-error/">Zookeeper & Kafka 실행 시 에러</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> Recent Comments</i></div><script type="text/javascript" src="//nillk.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">Hello, Programming!.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
